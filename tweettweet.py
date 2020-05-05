@@ -1,10 +1,11 @@
 import tweepy
 import json
+from os import environ
 
-consumer_key = environ[]
-consumer_secret = 
-access_key = 
-access_secret = 
+consumer_key = environ['CONSUMER_KEY']
+consumer_secret = environ['CONSUMER_SECRET']
+access_key = environ['ACCESS_KEY']
+access_secret = environ['ACCESS_SECRET']
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_key, access_secret)
