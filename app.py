@@ -7,13 +7,13 @@ app = Flask(__name__)
 
 @app.route('/handle')
 def respond():
-    handle = request.arg.get('name')
+    handle = request.args.get('name')
     return jsonify(get_tweets_by_name(handle))
 
 @app.route('/search')
 def search():
-    word = request.arg.get('word')
-    return jsonify(get_tweets_by_word(word))
+    look = request.args.get('word')
+    return jsonify(get_tweets_by_word(look))
 
 # A welcome message to test our server
 @app.route('/')
