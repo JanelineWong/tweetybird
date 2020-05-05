@@ -11,7 +11,7 @@ def respond():
     return jsonify(get_tweets_by_name(handle))
 
 @app.route('/search')
-def search():
+def lookfor():
     look = request.args.get('word')
     return jsonify(get_tweets_by_word(look))
 

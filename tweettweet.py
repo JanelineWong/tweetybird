@@ -74,8 +74,7 @@ def get_tweets_by_word(word):
             listtweet.append(new)
 
             # print(json.dumps(parsed, indent=4, sort_keys=True))
-        print(listtweet)
-
+        return(listtweet)
 # Driver code 
 if __name__ == '__main__': 
   
