@@ -5,12 +5,14 @@ from tweettweet import get_tweets_by_name, get_tweets_by_word
 
 app = Flask(__name__)
 
-@app.route('/handle/<name>')
-def respond(name):
-    return jsonify(get_tweets_by_name(name))
+@app.route('/handle')
+def respond():
+    handle = request.arg.get('name')
+    return jsonify(get_tweets_by_name(handle))
 
-@app.route('/search/<word>')
-def search(word):
+@app.route('/search')
+def search():
+    word = request.arg.get('word')
     return jsonify(get_tweets_by_word(word))
 
 # A welcome message to test our server
