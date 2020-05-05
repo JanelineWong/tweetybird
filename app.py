@@ -8,12 +8,12 @@ app = Flask(__name__)
 @app.route('/handle')
 def respond():
     handle = request.args.get('name')
-    return get_tweets_by_name(handle)
+    return jsonify(get_tweets_by_name(handle))
 
 @app.route('/search')
 def search():
     look = request.args.get('word')
-    return get_tweets_by_word(look)
+    return jsonify(get_tweets_by_word(look))
 
 # A welcome message to test our server
 @app.route('/')
